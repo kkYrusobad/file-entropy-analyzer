@@ -1,0 +1,26 @@
+[package]
+name = "file-entropy-analyzer"
+version = "0.1.0"
+edition = "2021"
+description = "Analyze file entropy to detect encrypted, compressed, or packed files"
+authors = ["Your Name"]
+license = "MIT"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# CLI argument parsing - we'll understand how this works under the hood
+clap = { version = "4", features = ["derive"] }
+
+# Progress bars for large files
+indicatif = "0.17"
+
+# Colored terminal output
+colored = "2"
+
+# Directory traversal
+walkdir = "2"
+
+[dev-dependencies]
+# For testing
+tempfile = "3"
